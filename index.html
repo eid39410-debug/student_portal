@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة تحكم الطالب - منصة الطلاب</title>
+    <title>تسجيل دخول الطالب - منصة الطلاب</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; }
-        .dashboard-container { max-width: 1000px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; text-align: center; margin-bottom: 30px; }
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .course-card { padding: 20px; background: #007bff; color: #fff; border-radius: 8px; text-align: center; text-decoration: none; transition: background 0.3s; }
-        .course-card:hover { background: #0056b3; }
-        .course-card h3 { margin: 0 0 10px 0; }
-        .course-card p { margin: 0; font-size: 0.9em; opacity: 0.9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        h1 { color: #333; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 1em; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; transition: background 0.3s; }
+        button:hover { background-color: #0056b3; }
+        .error { color: red; margin-top: 10px; display: none; }
     </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <h1>لوحة تحكم الطالب</h1>
-        <div class="course-grid">
-            <a href="computer_programs.html" class="course-card">
-                <h3>تصميم برامج الحاسب الآلي</h3>
-                <p>تفاصيل ومحاضرات المادة</p>
-            </a>
-            <!-- باقي المواد ممكن تضاف هنا بنفس الطريقة -->
-        </div>
+    <div class="login-container">
+        <h1>تسجيل الدخول</h1>
+        <input type="text" id="studentCode" placeholder="أدخل كود الطالب" required>
+        <button onclick="validateLogin()">دخول</button>
+        <p id="errorMsg" class="error">الكود غير صحيح، حاول مرة أخرى.</p>
     </div>
+
+    <script>
+        function validateLogin() {
+            const code = document.getElementById('studentCode').value;
+            // الكود التجريبي هو "12345"
+            if (code === "12345") {
+                window.location.href = "dashboard.html";
+            } else {
+                document.getElementById('errorMsg').style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
