@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - منصة الطلاب</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 0; }
+        .dashboard-container { max-width: 1000px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #333; text-align: center; margin-bottom: 30px; }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .course-card { padding: 20px; background: #007bff; color: #fff; border-radius: 8px; text-align: center; text-decoration: none; transition: background 0.3s; }
+        .course-card:hover { background: #0056b3; }
+        .course-card h3 { margin: 0 0 10px 0; }
+        .course-card p { margin: 0; font-size: 0.9em; opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>لوحة التحكم</h1>
+        <div class="course-grid">
+            <a href="infrastructure.html" class="course-card">
+                <h3>البنية التحتية</h3>
+                <p>تفاصيل ومحاضرات المادة</p>
+            </a>
+            <a href="systems_analysis.html" class="course-card">
+                <h3>تحليل وتصميم النظم</h3>
+                <p>تفاصيل ومحاضرات المادة</p>
+            </a>
+            <a href="computer_programs.html" class="course-card">
+                <h3>تصميم برامج الحاسب الآلي</h3>
+                <p>تفاصيل ومحاضرات المادة</p>
+            </a>
+            <a href="reports_application.html" class="course-card">
+                <h3>تطبيقات الحاسب في إعداد التقارير</h3>
+                <p>تفاصيل ومحاضرات المادة</p>
+            </a>
+            <a href="strategic_management.html" class="course-card">
+                <h3>الإدارة الاستراتيجية</h3>
+                <p>تفاصيل ومحاضرات المادة</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
