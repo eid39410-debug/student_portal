@@ -18,15 +18,17 @@
     <div class="login-container">
         <h1>تسجيل الدخول</h1>
         <input type="text" id="studentCode" placeholder="أدخل كود الطالب" required>
+        <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
         <button onclick="validateLogin()">دخول</button>
-        <p id="errorMsg" class="error">الكود غير صحيح، حاول مرة أخرى.</p>
+        <p id="errorMsg" class="error">كود الطالب أو كلمة المرور غير صحيحة.</p>
     </div>
 
     <script>
         function validateLogin() {
             const code = document.getElementById('studentCode').value;
-            // الكود التجريبي هو "12345"
-            if (code === "12345") {
+            const password = document.getElementById('password').value;
+            // الكود التجريبي هو "12345" وكلمة المرور "password123"
+            if (code === "12345" && password === "password123") {
                 window.location.href = "dashboard.html";
             } else {
                 document.getElementById('errorMsg').style.display = "block";
