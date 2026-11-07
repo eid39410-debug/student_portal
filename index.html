@@ -3,37 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل دخول الطالب - منصة الطلاب</title>
+    <title>صفحة دخول نظام التعليم</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        body { font-family: UI Gothic, Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         .login-container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 350px; text-align: center; }
-        h1 { color: #333; margin-bottom: 20px; }
+        .login-container img { width: 110px; height: auto; margin-bottom: 20px; object-fit: contain; }
         input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 1em; }
+        h1 { color: #333; margin-bottom: 20px; font-size: 1.5em; }
         button { width: 100%; padding: 12px; background-color: #007bff; color: #fff; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; transition: background 0.3s; }
         button:hover { background-color: #0056b3; }
         .error { color: red; margin-top: 10px; display: none; }
     </style>
 </head>
 <body>
+
     <div class="login-container">
-        <h1>تسجيل الدخول</h1>
+        <!-- ضع هنا اسم صوره اللوجو الخاصة بك -->
+        <img src="logo.jpg" alt="شعار المعهد">
+        <h1>تسجيل دخول الطلاب</h1>
         <input type="text" id="studentCode" placeholder="أدخل كود الطالب" required>
         <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
         <button onclick="validateLogin()">دخول</button>
-        <p id="errorMsg" class="error">كود الطالب أو كلمة المرور غير صحيحة.</p>
+        <p id="errorMsg" class="error">كود الطالب أو كلمة المرور غير صحيحة</p>
     </div>
 
     <script>
         function validateLogin() {
             const code = document.getElementById('studentCode').value;
             const password = document.getElementById('password').value;
-            
-            if (code === "202520018" && password === "30504222103897") {
+
+            if (code === "20252018" && password === "305042210897") {
                 window.location.href = "dashboard.html";
             } else {
-                document.getElementById('errorMsg').style.display = "block";
+                document.getElementById('errorMsg').style.display = 'block';
             }
         }
     </script>
 </body>
 </html>
+
